@@ -33,6 +33,7 @@
 			background-color: #eee;
 		}
 		.menu{
+			display: none;
 			width: 100%;
 			list-style: none;
 			margin: 0;
@@ -41,6 +42,7 @@
 		.menu a:hover{
 			background-color: rgba(204,204,204, .5);
 		}
+		nav .active{ display: block }
 /* Header */
 	#header{
 		height: 100vh;
