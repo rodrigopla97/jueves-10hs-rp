@@ -3,8 +3,7 @@
 		box-sizing: border-box;
 		font-family: sans-serif;
 	}
-	body{ margin: 0 }
-
+	body, h1, h2, h3{ margin: 0 }
 /* Navigation */
 	.menu{
 		display: flex;
@@ -35,7 +34,12 @@
 	}
 
 /* Main Content */
-
+	section{
+		max-width: 920px;
+		margin: 1rem auto;
+		padding: 1rem;
+		box-shadow: 0 0 .5rem #ccc;
+	}
 /* Footer */
 
 /* Contact Form */
