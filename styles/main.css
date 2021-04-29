@@ -1,6 +1,27 @@
-/*Content First - Mobile First*/
+/* Content First - Mobile First */
 	*{
 		box-sizing: border-box;
 		font-family: sans-serif;
 	}
 	body{ margin: 0 }
+
+/* Navigation */
+		nav{
+			display: flex;
+			justify-content: space-between;
+			background-color: #248;
+		}
+
+/* Header */
+	#header{
+		height: 100vh;
+		min-height: 300px;
+		max-height: 600px;
+		background-color: #ccc;
+	}
+
+/* Main Content */
+
+/* Footer */
+
+/* Contact Form */
