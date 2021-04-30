@@ -11,7 +11,17 @@
 </head>
 
 <body>
-    <header>
+    <nav>
+        <a href="">GIT</a>
+        <button>&equiv;</button>
+        <ul class="menu">
+            <li><a href="#">inicio</a></li>
+            <li><a href="#about">acerca</a></li>
+            <li><a href="#example">ejemplos</a></li>
+            <li><a href="#contact">contacto</a></li>
+        </ul>
+    </nav>
+    <header id="header">
         <h1>Curso Git</h1>
         <p>Desarrollo colaborativo</p>
     </header>
@@ -92,6 +102,21 @@
                 <li><strong>git remote</strong> lista los repositorios remotos que hayan sido agregados. Si nuestro proyecto es un <em>clón</em> por defecto se agrega un remoto llamado <strong>origin</strong>, preo si fue creado, debemos hacerlo manualmente usando el comando <em>git remote add &lt;alias></em></li>
                 
             </ul>
+        </article>
+    </section>
+    <section>
+        <h2>Apuntadores de GIT</h2>
+        <article>
+            <h3>HEAD</h3>
+            <p>
+                Es un apuntador movil que nos permite navegar en el historial de cambios, normalmente apunta al último commit de la rama donde nos encontremos, y podemos cambiar su posición para poder visualizar el proyecto a como se encontraba en algún punto de referencia (commit) utilizando el comando <strong>git checkout &lt;ref></strong>
+            </p>
+        </article>
+        <article>
+            <h3>BRANCH</h3>
+            <p>
+                Las ramas son apuntadores dinámicos que siempre hacen referencia al último commit dentro del historial. Podemos crear diferentes ramas y cada una apuntara a un commit particular, este puede ser el mismo o pueden ser totalmente diferentes. Si se quiere comparar, podrían interpretarse como líneas de tiempo paralelas; las ramas son necesarias ya que permiten al apuntador HEAD navegar en el historial y volver al último commit sin problemas.
+            </p>
         </article>
     </section>
 </body>
