@@ -1,13 +1,39 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git Desarrollo colaborativo</title>
 </head>
+
 <body>
-    <h1>Curso Git</h1>
-    <p>Desarrollo colaborativo</p>
+    <header>
+        <h1>Curso Git</h1>
+        <p>Desarrollo colaborativo</p>
+    </header>
+    <section>
+        <h2>Areas de GIT</h2>
+        <article>
+            <h3>Working directory</h3>
+            <p>
+                Es la carpeta donde realizamos los cambios en nuestro proyecto, en este lugar rara vez utilizaremos la consola y es el área donde se visualizan todos los cambios de los archivos
+            </p>
+        </article>
+        <article>
+            <h3>Staging Area (Index)</h3>
+            <p>
+                Es el área de control de cambios, donde se verfucan las modificaciones realizadas en los archivos del proyecto, Aquí se realizan los <strong>snapshots</strong> de codigo para luego ser confirmados.
+            </p>
+        </article>
+        <article>
+            <h3>Repository (Local / Remote)</h3>
+            <p>
+                Es el área donde se almacena las capturas en formato <strong>BLOB (Binary Object File)</strong> a las cuales podemos acceder mediante el historial de cambios. Para quenerar estos archivos debemos emitir un commit, el mismo valida los cambios y los almacena en la base de datos de GIT.
+            </p>
+        </article>
+    </section>
 </body>
+
 </html>
