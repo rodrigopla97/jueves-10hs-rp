@@ -4,7 +4,7 @@
     font-family: sans-serif;
 }
 
-body{
+body, h1, h2, h3{
     margin: 0;
 }
 
@@ -35,7 +35,12 @@ body{
     background-color: #ccc;
 }
 /* Main Content */
-
+section {
+    max-width: 920px;
+    margin: 1rem auto;
+    padding: 1rem;
+    box-shadow: 0 0 .5rem #ccc;
+}
 /* Footer */
 
 /* Contact Form */
