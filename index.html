@@ -93,6 +93,18 @@
 				Las ramas son apuntadores dinamicos que siempre hacen referencia al ultimo commit dentro del historial. Podemos crear diferentes ramas y cada una apuntara a un commit  particular, este puede ser el mismo o pueden ser totalmente diferentes. Si se quiere comparar, podrian interpretarse como lineas de tiempo paralelas; las ramas son necesarias ya que permiten al apuntador HEAD navegar en el historial y volver al ultimo commit  sin problemas. Para crear una rama debemos utilizar el comando <strong>git branch &lt;branch></strong>
 				</p>
 			</article>
+			<article>
+				<h3>STASH</h3>
+				<p>
+					Es la zona temporal de cambios, donde podemos apilar todas las modificaciones realizadas en el WORKING DIRECTORY de aquellos archivos que se encuentren en el INDEX. Estos cambios no se almacenan en el repositorio remoto y utilizan como referencia el INDEX y el COMMIT al que apunta para poder reestablecer el directorio de trabajo, esto se hace cuando queremos cambiar de rama o commit dentro de la misma rama y tenemos cambios pendientes que no fueron cometidos. Para aplicarlo debemos utilizar los comandos <strong>git stash</strong> para limpiar el INDEX y almacenar los cambios en la ZONA STASH y luego <strong>git stash pop</strong> para aplicarlos y eliminar la referencia de la ZONA STASH.
+				</p>
+			</article>
+			<article>
+				<h3>TAG</h3>
+				<p>
+				Las etiquetas son apuntadores estaticos que apuntan a un commit en particular dentro del historial, se suelen utilizar para el versionado de nuestro proyecto e incluso se pueden generar anotaciones al igual que en cualquier mensaje de commit. Se utilizan para facilitar la navegacion dentro del historial a un punto en particular y normalmente se identifican de manera similar. Para subir los tags de un proyecto a un repositorio remoto debemos utilizar el comando <strong>git push &lt;remote> --tags</strong>
+				</p>
+			</article>
 		</section>
 		<footer id="footer">
 			<form id="contact" action="">
