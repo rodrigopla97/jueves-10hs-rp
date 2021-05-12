@@ -92,6 +92,17 @@
 				<p>
 				Las ramas son apuntadores dinamicos que siempre hacen referencia al ultimo commit dentro del historial. Podemos crear diferentes ramas y cada una apuntara a un commit  particular, este puede ser el mismo o pueden ser totalmente diferentes. Si se quiere comparar, podrian interpretarse como lineas de tiempo paralelas; las ramas son necesarias ya que permiten al apuntador HEAD navegar en el historial y volver al ultimo commit  sin problemas. Para crear una rama debemos utilizar el comando <strong>git branch &lt;branch></strong>
 				</p>
+				<ul class="list">
+					<li>
+						<strong>git branch &lt;branch> </strong>crea una rama con el nombre espeficicado.</li>
+					<li><strong>git branch -d &lt;branch> </strong> elimina la rama seleccionada siempre y cuando los cambios de la misma hayan sido integradas a otra rama. (eliminacion segura)</li>
+					<li>
+						<strong>git branch -D &lt;branch></strong> elimina la rama selecciona aunque los cambios de la misma no se hayan integrado al proyecto
+					</li>
+					<li>
+						<strong>git merge &lt;branch></strong>
+					</li>
+				</ul>
 			</article>
 			<article>
 				<h3>STASH</h3>
