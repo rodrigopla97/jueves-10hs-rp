@@ -122,6 +122,12 @@
 				<p>
 				Las etiquetas son apuntadores estaticos que apuntan a un commit en particular dentro del historial, se suelen utilizar para el versionado de nuestro proyecto e incluso se pueden generar anotaciones al igual que en cualquier mensaje de commit. Se utilizan para facilitar la navegacion dentro del historial a un punto en particular y normalmente se identifican de manera similar. Para subir los tags de un proyecto a un repositorio remoto debemos utilizar el comando <strong>git push &lt;remote> --tags</strong>
 				</p>
+				<ul class="list">
+					<li><strong>git tag &lt;tag></strong>agrega una etiqueta al commit actual</li>
+					<li><strong>git tag -d &lt; tag></strong>elimina la etiqueta seleccionada</li>
+					<li><strong>git tag -l</strong>muestra todas las etiquetas creadas</li>
+					<li><strong>git push &lt;remote> --tags</strong>envia al repositorio remoto las etiquetas locales</li>
+				</ul>
 			</article>
 		</section>
 		<footer id="footer">
