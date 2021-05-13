@@ -131,10 +131,42 @@
 				Las etiquetas son apuntadores estáticos que apuntan a un commit en particular dentro del historial, se suelen utilizar para el versionado de nuestro proyecto e incluso se pueden generar anotaciones al igual que en cualquier mensaje de commit. Se utilizan para facilitar la navegación dentro del historial a un punto en particular y normalmente se identifican de manera similar. Para subir los tags de un proyecto a un repositorio remoto debemos utilizar el comando <strong>git push &lt;remote> --tags</strong>
 				</p>
 				<ul class="list">
-					<li><strong>git tag &lt;tag></strong> agrega una etiqueta al commit actual</li>
-					<li><strong>git tag -d &lt; tag></strong> elimina la etiqueta seleccionada</li>
-					<li><strong>git tag -l</strong> muestra todas las etiquetas creadas</li>
-					<li><strong>git push &lt;remote> --tags</strong> envia al repositorio remoto las etiquetas locales</li>
+					<li><strong>git tag &lt;tag> </strong>agrega una etiqueta al commit actual</li>
+					<li><strong>git tag -d &lt; tag> </strong>elimina la etiqueta seleccionada</li>
+					<li><strong>git tag -l </strong>muestra todas las etiquetas creadas</li>
+					<li><strong>git push &lt;remote> --tags </strong>envia al repositorio remoto las etiquetas locales</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<h2>Reestableciendo el Historial</h2>
+			<article>
+				<h3>Git Reset</h3>
+				<p>
+					Este comando reestablece el historial de commits eliminando del mismo las referencias con respecto a  estos. Existen diferentes formas de aplicar dicho comando, pero debemos tener en cuenta que solamente lo tenemos que aplicar si los cambios no fueron subidos al repositorio remoto
+				</p>
+				<ul class="list">
+					<li><strong>git reset &lt;ref> </strong> Elimina los commits involucrados del historial, pero mantiene el INDEX y el WORKING DIRECTORY intactos para generar nuevos commits con dichos cambios.</li>
+					<li><strong>git reset --mixed &lt;ref> </strong> Elimina los commits del historial, reestablece el INDEX a su estado anterior, pero mantiene el WORKING DIRECTORY intacto para reaplicar cambios anterios y descartar cambios no deseados.</li>
+					<li><strong>git reset --hard &lt;ref> </strong>Elimina los commits involucrados y reestablece todas las areas de Git.</li>
+					<li><strong>git reset &lt;ref> -- &lt;file> </strong> reestablece en el INDEX el archivo seleccionado a como se encontraba en la referencia indicada, y luego  cuando emitamos el commit, podamos utilizar el comando <em>git restore &lt;file></em> para reestablecer el archivo tras un inconveniente.</li>
+				</ul>
+			</article>
+			<article>
+				<h3>Git Revert</h3>
+				<p>
+					Este comando genera un nuevo commit que realiza las operaciones opuestas al referenciado, es bastante practico si queremos eliminar los ultimos cambios realizados y estos ya fueron subidos al repositorio remoto o simplemente queremos deshacer los cambios aplicados en un commit especifico.
+				</p>
+				<ul class="list">
+					<li>
+						<strong>git revert &lt;ref></strong> genera un nuevo commit revertiendo el commit referenciado.
+					</li>
+					<li>
+						<strong>git revert --abort</strong> cancela la operacion en caso de presentarse un conflicto.
+					</li>
+					<li>
+						<strong>git revert --continue</strong> continua con la operacion una vez resuelto el conflicto y agregados los cambios al INDEX.
+					</li>
 				</ul>
 			</article>
 		</section>
