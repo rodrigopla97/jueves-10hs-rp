@@ -142,6 +142,24 @@
 				</ul>
 			</article>
 		</section>
+		<section>
+			<h2>Reestableciendo el Historial</h2>
+			<article>
+				<h3>Git Reset</h3>
+				<p>
+					Este comando reestablece el historial de commits eliminando del mismo las referencias con respecto a  estos. Existen diferentes formas de aplicar dicho comando, pero debemos tener en cuenta que solamente lo tenemos que aplicar si los cambios no fueron subidos al repositorio remoto
+				</p>
+				<ul class="list">
+					<li><strong>git reset &lt;ref></strong> Elimina los commits involucrados del historial, pero mantiene el INDEX y el WORKING DIRECTORY intactos para generar nuevos commits con dichos cambios.</li>
+					<li><strong>git reset --mixed &lt;ref></strong> Elimina los commits del historial, reestablece el INDEX a su estado anterior, pero mantiene el WORKING DIRECTORY intacto para reaplicar cambios anterios y descartar cambios no deseados.</li>
+					<li><strong>git reset --hard &lt;ref></strong>Elimina los commits involucrados y reestablece todas las areas de Git.</li>
+					<li><strong>git reset &lt;ref> -- &lt;file></strong> reestablece en el INDEX el archivo seleccionado a como se encontraba en la referencia indicada, y luego  cuando emitamos el commit, podamos utilizar el comando <em>git restore &lt;file></em> para reestablecer el archivo tras un inconveniente.</li>
+				</ul>
+			</article>
+			<article>
+				<h3>Git Revert</h3>
+			</article>
+		</section>
 		<footer id="footer">
 			<form id="contact" action="">
 				
