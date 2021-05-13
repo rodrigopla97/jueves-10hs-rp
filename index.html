@@ -20,15 +20,15 @@
 			<p>Desarrollo colaborativo</p>
 		</header>
 		<section>
-			<h2>Configuracion Inicial</h2>
+			<h2>Configuración Inicial</h2>
 			<p>
-				Para empezar a trabajar con Git debemos establecer una minima configuracion necesaria para realizar nuestros commits. Esto consiste en definir el nombre y correo de contacto, ademas de algunos parametros extra.
+				Para empezar a trabajar con Git debemos establecer una mínima configuración necesaria para realizar nuestros commits. Esto consiste en definir el nombre y correo de contacto, ademas de algunos parametros extra.
 			</p>
 			<ul class="list">
 				<li><strong>git config --global user.name "username"</strong> define el nombre de contacto con el que se asocian los commits</li>
 				<li><strong>git config --global user.email "email"</strong> define el correo de contacto con el que se asocian los commits.</li>
-				<li><strong>git config core.editor "path | editor"</strong> define el editor de codigo predeterminado para la operaciones con git.</li>
-				<li><strong>git config alias.value "comand"</strong> define un atajo para algun comando de git.</li>
+				<li><strong>git config core.editor "path | editor"</strong> define el editor de código predeterminado para la operaciones con git.</li>
+				<li><strong>git config alias.value "comand"</strong> define un atajo para algún comando de git.</li>
 			</ul>
 		</section>
 		<section>
@@ -37,7 +37,7 @@
 				<h3>Working directory</h3>
 				<p>
 					Es la carpeta donde realizamos los cambios en nuestro proyecto,
-					en este lugar rara vez utilizaremos la consola y es el area 
+					en este lugar rara vez utilizaremos la consola y es el área 
 					donde se visualizan todos los cambios de los archivos.
 				</p>
 				<ul class="list">
@@ -50,18 +50,16 @@
 			<article>
 				<h3>Staging Area (Index)</h3>
 				<p>
-					Es el area de control de cambios, donde se verifican las modificaciones
-					realizadas en los archivos del proyecto. Aqui se realizan los 
-					<strong> snapshots </strong> de codigo para luego ser confirmados.
+					Es el área de control de cambios, donde se verifican las modificaciones realizadas en los archivos del proyecto. Aqui se realizan los <strong> snapshots </strong> de código para luego ser confirmados.
 				</p>
 				<ul class="list">
 					<li>
 						<strong>git status</strong> verifica los cambios del WORKING DIRECTORY y los compara con lo almacenado en el INDEX. Cada archivo posee un estado segun las acciones realizadas
 						<ul>
-							<li><strong>untracked:</strong> no se esta haciendo seguimiento</li>
-							<li><strong>tracked:</strong> se esta haciendo seguimiento</li>
+							<li><strong>untracked:</strong> no se está haciendo seguimiento</li>
+							<li><strong>tracked:</strong> se está haciendo seguimiento</li>
 							<li><strong>modified:</strong> difiere con lo que se encuentra en el index</li>
-							<li><strong>commited:</strong> los cambios estan registrados</li>
+							<li><strong>commited:</strong> los cambios están registrados</li>
 						</ul>
 					</li>
 					<li><strong>git add &lt;file></strong> agrega al INDEX los archivos especificados, tambien se pueden agregar directorios, siempre y cuando estos tengan archivos en su interior. Un uso rapido de este comando es <em>git add .</em> que agrega todos los archivos que se hayan modificado o creado en el directorio actual</li>
@@ -72,21 +70,19 @@
 			<article>
 				<h3>Repository (Local / Remote)</h3>
 				<p>
-					Es el lugar donde se almacen las capturas en formato 
-					<strong> BLOB (Binary Object File) </strong> a las cuales podemos acceder
-					mediante el historial de cambios. Para generar estos archivos debemos emitir
-					un commit, el mismo valida los cambios y los almacena en la base de datos de GIT.
+					Es el lugar donde se almacena las capturas en formato 
+					<strong> BLOB (Binary Object File) </strong> a las cuales podemos acceder mediante el historial de cambios. Para generar estos archivos debemos emitir un commit, el mismo valida los cambios y los almacena en la base de datos de GIT.
 				</p>
 				<ul class="list">
-					<li><strong>git commit</strong> Abre el editor para generar una confirmacion de cambios que sera guardada en la base de datos del repositorio. Un uso rapido de este comando es <em>git commit -m "message"</em> que permite generar un commit con mensaje sin abrir el editor.</li>
+					<li><strong>git commit</strong> Abre el editor para generar una confirmación de cambios que sera guardada en la base de datos del repositorio. Un uso rapido de este comando es <em>git commit -m "message"</em> que permite generar un commit con mensaje sin abrir el editor.</li>
 					<li>
-						<strong>git diff &lt;ref></strong> Compara el WORKING DIRECTORY con el commit al cual apunta la referencia especificada. una forma de comparar cambios realizados cuando no se realizo un commit es <em>git diff HEAD</em>, pero si queremos saber como difiere nuestra cabecera con respecto a otro commit podemo indicarlo de diferentes maneras.
+						<strong>git diff &lt;ref></strong> Compara el WORKING DIRECTORY con el commit al cual apunta la referencia especificada. una forma de comparar cambios realizados cuando no se realizó un commit es <em>git diff HEAD</em>, pero si queremos saber como difiere nuestra cabecera con respecto a otro commit podemos indicarlo de diferentes maneras.
 						<ul>
-							<li><strong>referencia absoluta: </strong> especificamente hablando es el numero de HASH del commit que queremos comparar, por ejemplo <em>c215714</em></li>
-							<li><strong>referencia relativa</strong> indica cuantos commit atras esta nuestra referencia, por ejemplo <em>HEAD^^</em> indica dos ancestros antes de HEAD y <em>HEAD~4</em> indica 4 commits antes de HEAD</li>
+							<li><strong>referencia absoluta: </strong> especificamente hablando es el número de HASH del commit que queremos comparar, por ejemplo <em>c215714</em></li>
+							<li><strong>referencia relativa</strong> indica cuantos commit atrás está nuestra referencia, por ejemplo <em>HEAD^^</em> indica dos ancestros antes de HEAD y <em>HEAD~4</em> indica 4 commits antes de HEAD</li>
 						</ul>
 					</li>
-					<li><strong>git blame &lt;file></strong> muestra las lineas de codigo del archivo especificado, colocando al principio en numero de commit, el nombre del autor, la fecha y hora en que se realizo el mismo, e incluso indica cuando los cambios todavia no fueron confirmados.</li>
+					<li><strong>git blame &lt;file></strong> muestra las lineas de codigo del archivo especificado, colocando al principio en numero de commit, el nombre del autor, la fecha y hora en que se realizó el mismo, e incluso indica cuando los cambios todavia no fueron confirmados.</li>
 					<li><strong>git remote</strong> lista los repositorios remotos que hayan sido agregados, si nuestro proyecto es un <em>clon</em> por defecto se agrega un remoto llamado <strong>origin</strong>, pero si fue creado, debemos hacerlo manualmente usando el comando <em>git remote add &lt;alias> &lt;URL></em></li>
 				</ul>
 			</article>
@@ -96,18 +92,18 @@
 			<article>
 				<h3>HEAD</h3>
 				<p>
-					Es un apuntador movil que nos permite navegar en el historial de cambios, normalmente apunta al ultimo commit de la rama donde nos encontremos y podemos cambiar su posicion para poder visualizar el proyecto a como se encontraba en algun punto de referencia (commit) utilizando el comando <strong>git checkout &lt;ref></strong>
+					Es un apuntador móvil que nos permite navegar en el historial de cambios, normalmente apunta al último commit de la rama donde nos encontremos y podemos cambiar su posicion para poder visualizar el proyecto a como se encontraba en algun punto de referencia (commit) utilizando el comando <strong>git checkout &lt;ref></strong>
 				</p>
 			</article>
 			<article>
 				<h3>BRANCH</h3>
 				<p>
-				Las ramas son apuntadores dinamicos que siempre hacen referencia al ultimo commit dentro del historial. Podemos crear diferentes ramas y cada una apuntara a un commit  particular, este puede ser el mismo o pueden ser totalmente diferentes. Si se quiere comparar, podrian interpretarse como lineas de tiempo paralelas; las ramas son necesarias ya que permiten al apuntador HEAD navegar en el historial y volver al ultimo commit  sin problemas. Para crear una rama debemos utilizar el comando <strong>git branch &lt;branch></strong>
+				Las ramas son apuntadores dinámicos que siempre hacen referencia al último commit dentro del historial. Podemos crear diferentes ramas y cada una apuntará a un commit particular, este puede ser el mismo o pueden ser totalmente diferentes. Si se quiere comparar, podrian interpretarse como líneas de tiempo paralelas; las ramas son necesarias ya que permiten al apuntador HEAD navegar en el historial y volver al último commit sin problemas. Para crear una rama debemos utilizar el comando <strong>git branch &lt;branch></strong>
 				</p>
 				<ul class="list">
 					<li>
-						<strong>git branch &lt;branch> </strong>crea una rama con el nombre espeficicado.</li>
-					<li><strong>git branch -d &lt;branch> </strong> elimina la rama seleccionada siempre y cuando los cambios de la misma hayan sido integradas a otra rama. (eliminacion segura)</li>
+						<strong>git branch &lt;branch> </strong> crea una rama con el nombre espeficicado.</li>
+					<li><strong>git branch -d &lt;branch> </strong> elimina la rama seleccionada siempre y cuando los cambios de la misma hayan sido integradas a otra rama. (eliminación segura)</li>
 					<li>
 						<strong>git branch -D &lt;branch></strong> elimina la rama selecciona aunque los cambios de la misma no se hayan integrado al proyecto
 					</li>
@@ -124,21 +120,21 @@
 				<ul class="list">
 					<li><strong>git stash</strong> agrega los cambios que se encuentren en el index a la zona stash</li>
 					<li><strong>git stash list</strong> muestra la lista de cambios almacenados en la zona stash</li>
-					<li><strong>git stash apply</strong> aplica el ultimo cambio almacenado en la zona stash</li>
-					<li><strong>git stash drop</strong> elimina el ultimo cambio de la zona stash</li>
-					<li><strong>git stash pop</strong> aplica y luego elimina el ultimo cambio que se encuentre en la zona stash</li>
+					<li><strong>git stash apply</strong> aplica el último cambio almacenado en la zona stash</li>
+					<li><strong>git stash drop</strong> elimina el último cambio de la zona stash</li>
+					<li><strong>git stash pop</strong> aplica y luego elimina el último cambio que se encuentre en la zona stash</li>
 				</ul>
 			</article>
 			<article>
 				<h3>TAG</h3>
 				<p>
-				Las etiquetas son apuntadores estaticos que apuntan a un commit en particular dentro del historial, se suelen utilizar para el versionado de nuestro proyecto e incluso se pueden generar anotaciones al igual que en cualquier mensaje de commit. Se utilizan para facilitar la navegacion dentro del historial a un punto en particular y normalmente se identifican de manera similar. Para subir los tags de un proyecto a un repositorio remoto debemos utilizar el comando <strong>git push &lt;remote> --tags</strong>
+				Las etiquetas son apuntadores estáticos que apuntan a un commit en particular dentro del historial, se suelen utilizar para el versionado de nuestro proyecto e incluso se pueden generar anotaciones al igual que en cualquier mensaje de commit. Se utilizan para facilitar la navegación dentro del historial a un punto en particular y normalmente se identifican de manera similar. Para subir los tags de un proyecto a un repositorio remoto debemos utilizar el comando <strong>git push &lt;remote> --tags</strong>
 				</p>
 				<ul class="list">
-					<li><strong>git tag &lt;tag></strong>agrega una etiqueta al commit actual</li>
-					<li><strong>git tag -d &lt; tag></strong>elimina la etiqueta seleccionada</li>
-					<li><strong>git tag -l</strong>muestra todas las etiquetas creadas</li>
-					<li><strong>git push &lt;remote> --tags</strong>envia al repositorio remoto las etiquetas locales</li>
+					<li><strong>git tag &lt;tag></strong> agrega una etiqueta al commit actual</li>
+					<li><strong>git tag -d &lt; tag></strong> elimina la etiqueta seleccionada</li>
+					<li><strong>git tag -l</strong> muestra todas las etiquetas creadas</li>
+					<li><strong>git push &lt;remote> --tags</strong> envia al repositorio remoto las etiquetas locales</li>
 				</ul>
 			</article>
 		</section>
