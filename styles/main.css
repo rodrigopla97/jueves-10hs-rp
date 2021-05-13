@@ -58,6 +58,19 @@
 		padding: 1rem;
 		box-shadow: 0 0 .5rem #ccc;
 	}
+	section h3{
+		color: #ccc;
+		border-bottom: .1rem solid #ccc;
+	}
+	.list{
+		margin: 1rem;
+		margin-left: 3rem;
+		border-left: .25rem solid #448;
+		padding: 1.5rem;
+		line-height: 1.5rem;
+		list-style: none;
+		background-color: #eee;
+	}
 /* Footer */
 	#footer{
 		padding: 1rem;
