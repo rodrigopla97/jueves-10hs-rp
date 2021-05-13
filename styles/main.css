@@ -85,4 +85,18 @@
 	#footer a:hover{
 		color:#eee
 	}
+
+	#footer table{
+		margin:auto;
+		border-collapse: collapse;
+	}
+	#footer table caption{ 
+		border-radius: .5rem .5rem  0 0;
+		background-color: #88E;
+	}
+	#footer thead{ background-color: #66c}
+	#footer tbody{ color: #333 }
+	#footer tbody tr:nth-child(even){background-color: #ccc }
+	#footer tbody tr:nth-child(odd){ background-color: #eee }
+	#footer caption, #footer th, #footer td{ padding: .5rem }
 /* Contact Form */
