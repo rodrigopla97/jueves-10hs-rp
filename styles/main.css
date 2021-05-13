@@ -59,5 +59,17 @@
 		box-shadow: 0 0 .5rem #ccc;
 	}
 /* Footer */
-
+	#footer{
+		padding: 1rem;
+		color: #eee;
+		background-color: #448;
+	}
+	#footer a{
+		color: #ccc;
+		text-decoration: none;
+		font-weight: bold;
+	}
+	#footer a:hover{
+		color:#eee
+	}
 /* Contact Form */
