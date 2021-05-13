@@ -109,6 +109,13 @@
 				<p>
 					Es la zona temporal de cambios, donde podemos apilar todas las modificaciones realizadas en el WORKING DIRECTORY de aquellos archivos que se encuentren en el INDEX. Estos cambios no se almacenan en el repositorio remoto y utilizan como referencia el INDEX y el COMMIT al que apunta para poder reestablecer el directorio de trabajo, esto se hace cuando queremos cambiar de rama o commit dentro de la misma rama y tenemos cambios pendientes que no fueron cometidos. Para aplicarlo debemos utilizar los comandos <strong>git stash</strong> para limpiar el INDEX y almacenar los cambios en la ZONA STASH y luego <strong>git stash pop</strong> para aplicarlos y eliminar la referencia de la ZONA STASH.
 				</p>
+				<ul class="list">
+					<li><strong>git stash</strong> agrega los cambios que se encuentren en el index a la zona stash</li>
+					<li><strong>git stash list</strong> muestra la lista de cambios almacenados en la zona stash</li>
+					<li><strong>git stash apply</strong> aplica el ultimo cambio almacenado en la zona stash</li>
+					<li><strong>git stash drop</strong> elimina el ultimo cambio de la zona stash</li>
+					<li><strong>git stash pop</strong> aplica y luego elimina el ultimo cambio que se encuentre en la zona stash</li>
+				</ul>
 			</article>
 			<article>
 				<h3>TAG</h3>
